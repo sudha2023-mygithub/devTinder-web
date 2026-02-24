@@ -32,7 +32,7 @@ const Connections = () => {
         return (
           <div
             key={_id}
-            className="w-1/2 flex justify-center m-4 p-4 rounded-lg bg-base-300 mx-auto"
+            className="w-1/2 flex justify-baseline m-4 p-4 rounded-lg bg-base-300 mx-auto"
           >
             <div>
               <img
