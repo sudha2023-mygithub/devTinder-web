@@ -10,7 +10,6 @@ const Feed = () => {
   const feed = useSelector((store) => store.feed);
 
   const getFeed = async () => {
-    if (feed) return;
     try {
       const res = await axios.get(BASE_URL + "/feed", {
         withCredentials: true,
@@ -25,7 +24,7 @@ const Feed = () => {
     getFeed();
   }, []);
   return (
-    feed && (
+    feed?.data?.length > 0 && (
       <div className="flex justify-center my-10">
         <UserCard user={feed?.data[0]} />
       </div>
